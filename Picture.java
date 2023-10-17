@@ -62,13 +62,12 @@ public class Picture
         sun.changeColor("yellow");
         sun.changeSize(80);
         sun.moveHorizontal(100);
-        sun.moveVertical(-150);
-        sun.slowMoveVertical(80);
-       
+        sun.moveVertical(-100);
+        sun.slowMoveVertical(320);
+               
         
         
         moon = new Circle();
-    
         moon.changeColor("magenta");
         moon.moveHorizontal(-100);
         moon.moveVertical(-40);
@@ -103,6 +102,17 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+        }
+    }
+    /**
+     * Change this picture to use color display
+     */
+    public void amanecer()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+            moon.makeInvisible();
+            sun.slowMoveVertical(-270);
         }
     }
 }
